@@ -4,7 +4,8 @@ import Footer from '../common/footer/Footer'
 
 const Account = () => {
     return(
-        <Footer/>
+      <>
+      </>
     )
 }
 

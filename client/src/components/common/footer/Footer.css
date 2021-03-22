@@ -7,6 +7,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 80px;
 }
 
 .footer-right{
@@ -34,7 +35,7 @@
 .footer-center{
     height: 100%;
     flex: 34%;
-    border-right: solid 4px #292F36;
+    border-right: solid 1px #292F36;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,7 +51,7 @@
     font-weight: 900;
     height: 100%;
     flex: 34%;
-    border-right: solid 4px #292F36;
+    border-right: solid 1px #292F36;
     display: flex;
     justify-content: center;
     align-items: center;

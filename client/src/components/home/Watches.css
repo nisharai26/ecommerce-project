@@ -1,0 +1,30 @@
+/* smart watches */
+
+.smart-watches{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.smart-watches div{
+    border: solid black 1px;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 350px;
+}
+
+.watch-one{
+    flex:1;
+    min-width: 300px;
+}
+
+.watch-two{
+    flex: 1;
+    min-width: 300px;
+}
+
+.watch-three{
+    flex: 1;
+    min-width: 300px;
+}

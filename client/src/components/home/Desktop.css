@@ -1,0 +1,30 @@
+/* desktops */
+
+.desktops{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.desktops div{
+    border: solid black 1px;
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 350px;
+}
+
+.desktop-one{
+    flex:1;
+    min-width: 300px;
+}
+
+.desktop-two{
+    flex: 1;
+    min-width: 300px;
+}
+
+.desktop-three{
+    flex: 1;
+    min-width: 300px;
+}

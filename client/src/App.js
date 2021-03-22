@@ -1,13 +1,17 @@
 import './App.css';
-import { BrowserRouter as Router } from "react-router-dom";
-// import Navbar from './components/common/navbar/Navbar';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Navbar from './components/common/navbar/Navbar';
 import Home from './components/home/Home';
-// import Navbar from './components/common/product-card/Product-card';
+import Footer from './components/common/footer/Footer';
 
 const App = () => {
   return(
     <div className="">
-      <Home/>
+      <BrowserRouter>
+        <Navbar/>
+        <Home/>
+        <Footer/>
+      </BrowserRouter>
     </div>
   )
 }

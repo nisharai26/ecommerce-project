@@ -1,21 +1,17 @@
 import React from 'react'
 import './Home.css'
-import Desktop from './Desktop'
-import Laptops from './Laptops'
-import Mobiles from './Mobiles'
-import Watches from './Watches'
-import Accessories from './Accessories'
+import CategoryRow from './CategoryRow'
 
 
 const Home = () => {
     return(
         <div className ='main-home'>
 
-            <Laptops/>
-            <Desktop/>
-            <Mobiles/>
-            <Watches/>
-            <Accessories/>
+            <CategoryRow categoryTitle = 'Laptops'/>
+            <CategoryRow categoryTitle = 'Desktops'/>
+            <CategoryRow categoryTitle = 'Mobiles'/>
+            <CategoryRow categoryTitle = 'Smart Watches'/>
+            <CategoryRow categoryTitle = 'Accessories'/>
 
         </div>
     )

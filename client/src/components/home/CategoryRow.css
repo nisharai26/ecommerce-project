@@ -1,12 +1,10 @@
-/* smart watches */
-
-.smart-watches{
+.category{
     display: flex;
     width: 80%;
     margin: auto;
 }
 
-.smart-watches div{
+.category div{
     border: solid black 1px;
     padding: 10px;
     margin-left: 15px;
@@ -14,17 +12,17 @@
     height: 350px;
 }
 
-.watch-one{
+.box-one{
     flex:1;
     min-width: 300px;
 }
 
-.watch-two{
+.box-two{
     flex: 1;
     min-width: 300px;
 }
 
-.watch-three{
+.box-three{
     flex: 1;
     min-width: 300px;
 }

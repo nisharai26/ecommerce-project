@@ -1,0 +1,13 @@
+.product-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.product-info {
+    display: flex;
+}

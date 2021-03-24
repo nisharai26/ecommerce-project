@@ -1,62 +1,70 @@
 .card-container {
-    display: flex;
+    display:flex;
 }
 
 .product-card {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    margin: 0 20px;
-    background-color: white;
-    box-shadow: 0 1px 3px 1px rgb(218, 218, 218);
-    text-align: center;
-    max-width: 30%;
+    display:flex;
+    position:relative;
+    flex-direction:column;
+    margin:0 20px;
+    background-color:#fff;
+    box-shadow:0 1px 3px 1px #dadada;
+    text-align:center;
+    max-width:30%;
+}
+
+.product-info {
+    display:flex;
+    flex-direction:column;
+    width:100%;
+}
+
+.expand-background-container {
+    position:absolute;
+    left:0;
+    bottom:0;
+    height:0;
+    text-align:center;
 }
 
 .expand-background {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    height: 0px;
-    background-color: #292f36;
-    z-index: 5;
-    transition: all 0.5s ease-out;
+    position:absolute;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    width:100%;
+    background-color:#292f36;
+    z-index:999;
+    transition:all .5s ease-out;
+    height:0;
 }
 
 .product-card img {
-    margin: 0 50px;
+    margin:0 50px;
+    max-width:100%;
 }
 
 .product-card p {
-    margin: 20px;
-    font-size: 1.5rem;
-    font-weight: bolder;
+    margin:20px;
+    font-size:1.5rem;
+    font-weight:bolder;
 }
 
 .product-card ul {
-    display: none;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    color:#fff;
+    list-style-type:none;
 }
 
 .product-card:hover {
-    position: relative;
-    
-}
-
-.product-card:hover ul {
-    display: block;
-    position: absolute;
-    transition-delay: all 0.2s;
+    position:relative;
 }
 
 .product-card:hover .expand-background {
-    height: 200px;
+    height:150px;
 }
 
 .info-container {
-    color: white;
-    background-color: #292f36;
-    padding: 20px;
+    color:#fff;
+    background-color:#292f36;
+    padding:20px;
 }

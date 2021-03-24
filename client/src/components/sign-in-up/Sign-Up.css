@@ -19,7 +19,7 @@ input[type="text"], input[type="password"]{
 }
 
 .form-container{
-    height: 950px;
+    min-height:65vh;
     display: flex;
     align-items: center;
     justify-content: center;

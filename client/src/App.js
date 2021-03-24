@@ -1,7 +1,8 @@
 import './App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import Navbar from './components/common/navbar/Navbar';
 import Home from './components/home/Home';
+import SignUp from './components/sign-in-up/Sign-Up';
+import Navbar from './components/common/navbar/Navbar';
 import Footer from './components/common/footer/Footer';
 
 const App = () => {
@@ -9,7 +10,10 @@ const App = () => {
     <div className="">
       <BrowserRouter>
         <Navbar/>
-        <Home/>
+        <Switch>
+          <Route path="/" exact component={Home}/>
+          <Route path="/sign-in-up" exact component={SignUp}/>
+        </Switch>
         <Footer/>
       </BrowserRouter>
     </div>

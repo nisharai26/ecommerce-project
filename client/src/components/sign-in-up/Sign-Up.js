@@ -24,9 +24,9 @@ const SignUp = () => {
                         :null}
                         <br/>
                         <br/>
-                        Sign In<input type="radio" name="signup" value="SignIn" onChange={() => setShow(false)}/>
+                        <input type="radio" name="signup" value="SignIn" onChange={() => setShow(false)}/>Sign In
                         <br/>
-                        Sign Up<input type="radio" name="signup" value="SignUp" onChange={() => setShow(true)}/>
+                        <input type="radio" name="signup" value="SignUp" onChange={() => setShow(true)}/>Sign Up
                         <br/>
                         <br/>
                     </div>

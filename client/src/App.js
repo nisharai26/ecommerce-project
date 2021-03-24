@@ -1,3 +1,4 @@
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import './App.css';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Home from './components/home/Home';
@@ -18,6 +19,8 @@ const App = () => {
         </Switch>
         <Footer/>
       </BrowserRouter>
+                <Route path = "/Account" exact component = {Account}/>
+                <Route path = "/Basket" exact component = {Basket}/>
     </div>
   )
 }

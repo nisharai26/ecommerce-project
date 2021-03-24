@@ -6,6 +6,8 @@ import Navbar from './components/common/navbar/Navbar';
 import Footer from './components/common/footer/Footer';
 import Checkout from './components/checkout/Checkout'
 
+
+
 const App = () => {
   return(
     <div className="">

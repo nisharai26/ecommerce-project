@@ -1,0 +1,14 @@
+.category {
+    margin: 2vh auto;
+}
+
+.category-row{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    justify-content: space-evenly;
+}
+
+.category-row a {
+    display: contents;
+}

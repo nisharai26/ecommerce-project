@@ -1,0 +1,18 @@
+.category {
+    margin: 2vh auto;
+}
+
+.category h2 {
+    text-decoration: none;
+    margin: 1vh 1vw;
+    display: inline-block;
+    color: #292f36;
+}
+
+.category-row{
+    display: flex;
+}
+
+.category-row a {
+    display: contents;
+}

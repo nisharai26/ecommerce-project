@@ -1,0 +1,27 @@
+.container{
+    display: flex;
+    height:100vh;
+  
+    justify-content: space-around;
+}
+
+.box1{
+    height:100%;
+    min-width:100px;
+    flex:33%;
+    background-color:gray;
+    border:1px 2px solid;
+}
+.box2{
+    height:100%;
+    min-width:100px;
+    flex:33%;
+    background-color:wheat;
+}
+.box3{
+    height:100%;
+    min-width:100px;
+    flex:33%;
+    background-color:gray;
+    border:1px 2px solid black; 
+}

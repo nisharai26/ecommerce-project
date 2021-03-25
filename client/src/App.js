@@ -19,7 +19,7 @@ const App = () => {
           <Route path="/sign-in-up" exact component={SignUp}/>
           <Route path="/checkout" exact component={Checkout}/>
           <Route path = "/Account" exact component = {Account}/>
-                <Route path = "/Basket" exact component = {Basket}/>
+          <Route path = "/Basket" exact component = {Basket}/>
         </Switch>
         <Footer/>
       </BrowserRouter>

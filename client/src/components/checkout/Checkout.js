@@ -7,7 +7,7 @@ const Checkout = () => {
         <div className="checkout-container">
             <div className="checkout-left">
                 <div className="form-container2">
-                    <form>
+                    <form className="form1">
                         <div className="form-inner2">
                             <div>
                                 <h2>Delivery Address</h2>
@@ -38,7 +38,7 @@ const Checkout = () => {
             </div>
             <div className="checkout-right">
                 <div className="form-container2">
-                    <form>
+                    <form className="form1">
                         <div className="form-inner2">
                             <div>
                                 <h2>In Your Basket</h2>
@@ -58,9 +58,9 @@ const Checkout = () => {
                                     <label htmlFor="city">Promo Code</label>
                                     <input type="text" name="city" id="city"/>
                                 </div>
-                                <input type="submit" value="APPLY PROMO CODE"/>
+                                <input className="button" type="submit" value="APPLY PROMO CODE"/>
                                 <br/>
-                                <input type="submit" value="CHECKOUT"/>
+                                <input className="button" type="submit" value="CONFIRM ORDER"/>
                             </div>
                         </div>
                     </form>

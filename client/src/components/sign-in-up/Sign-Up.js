@@ -7,7 +7,7 @@ const SignUp = () => {
     
     return(
         <div className="form-container">
-            <form>
+            <form className="form3">
                 <div className="form-inner">
                     <div className ="part1">
                         <h2>Login</h2>

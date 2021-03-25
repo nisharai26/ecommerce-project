@@ -1,5 +1,6 @@
 import React from 'react'
 import './Checkout.css'
+import Basket from '../basket/Basket';
 
 const Checkout = () => {
     
@@ -44,7 +45,7 @@ const Checkout = () => {
                                 <h2>In Your Basket</h2>
                                 <div className="form-group2">
                                     <label htmlFor="address1">Subtotal</label>
-                                    <p>£1000.00</p>
+                                    <p>£1205.99</p>
                                 </div>
                                 <div className="form-group2">
                                     <label htmlFor="address2">Shipping</label>
@@ -52,7 +53,7 @@ const Checkout = () => {
                                 </div>
                                 <div className="form-group2">
                                     <label htmlFor="postcode">Total</label>
-                                    <p>£1005.99</p>
+                                    <p>£1205.99</p>
                                 </div>
                                 <div className="form-group2">
                                     <label htmlFor="city">Promo Code</label>

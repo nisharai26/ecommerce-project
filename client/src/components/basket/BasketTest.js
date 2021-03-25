@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 import './BasketTest.css'
 
-const BasketTest = () => {
+const BasketTest = () => { 
     
     return(
         <div className="basket-container">
@@ -20,7 +20,7 @@ const BasketTest = () => {
                                     <label htmlFor="address1">Subtotal</label>
                                     <p>£1000</p>
                                 </div>
-                                <Link to = "/checkout"><input  className="input" type="submit" value="CHECKOUT"/></Link>
+                                <Link to = "/checkout"><input  className="basket-submit" type="submit" value="CHECKOUT"/></Link>
                             </div>
                         </div>
                     </form>

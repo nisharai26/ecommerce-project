@@ -56,7 +56,7 @@ const Checkout = () => {
                                 </div>
                                 <div className="form-group2">
                                     <label htmlFor="city">Promo Code</label>
-                                    <input type="text" name="city" id="city"/>
+                                    <input className="checkout-input" type="text" name="city" id="city"/>
                                 </div>
                                 <input className="button" type="submit" value="APPLY PROMO CODE"/>
                                 <br/>

@@ -3,9 +3,12 @@ const {Schema,model}= require('mongoose');
 
 const customer = new Schema({
     name:{type:String , required:true},
-    address:{type:String , required:true},
+    addressline1:{type:String ,required:true},
+    addressline2:{type:String ,required:false},
+    postcode:{type:String,required:true},
     email:{type:String , required:true},
-    password:{type:String , required:true}
+    password:{type:String , required:true},
+    orders :{type:Array,required:true}
    
    
 })

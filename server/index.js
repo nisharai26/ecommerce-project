@@ -38,12 +38,15 @@ app.get('/customer/all', async (req, res) => {
 });
 
 app.post('/customer/create',(req,res)=>{
-    const {name,address,email,password}=req.body;
+    const {name,addressline1,addreessline2,postcode,email,password}=req.body;
     const customer = new CustomerModel({
         name,
-       address,
+       addressline1,
+       addreessline2,
+       postcode,
        email,
-       password
+       password,
+       orders:[]
     });
     customer.save();
 
@@ -76,8 +79,14 @@ app.put('/customer/update/:id', async(req, res) => {
     if (!name) {
         name = undefined;
     }
-    if (!address) {
-        address = undefined;
+    if (!addressline1) {
+        addressline1 = undefined;
+    }
+    if (!addressline2) {
+        addressline2 = undefined;
+    }
+    if (!postcode) {
+        postcode = undefined;
     }
     if (!email) {
         email = undefined;
@@ -85,13 +94,16 @@ app.put('/customer/update/:id', async(req, res) => {
     if (!password) {
        password = undefined;
     }
-  
+ 
 
     let result = await CustomerModel.updateOne({_id: req.params.id}, {
         name,
-       address,
-       email,
-       password
+        addressline1,
+        addreessline2,
+        postcode,
+        email,
+        password,
+      
     }, {omitUndefined: true});
 
     res.send({

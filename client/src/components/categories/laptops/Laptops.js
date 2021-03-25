@@ -1,11 +1,11 @@
 import React from 'react'
-import './Laptops.css'
+import CategoryPage from '../Categories'
 
 const Laptops = () => {
-    return(
-        <>
-        </>
-    )
-}
+  <>
+    <CategoryPage/>
+  </>
 
+
+}
 export default Laptops;

@@ -1,0 +1,13 @@
+.category-container {
+    display:flex;
+    flex-wrap: wrap;
+    width:100%;
+
+
+}
+
+.category-container .product-card {
+   flex-basis: 33%;
+
+}
+

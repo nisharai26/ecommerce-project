@@ -58,20 +58,20 @@ const SignUp = () => {
     
     return(
         <div className="form-container">
-            <form onSubmit={createCustomer}>
+            <form className="form3" onSubmit={createCustomer}>
                 <div className="form-inner">
                     <div className ="part1">
                         <h2>Login</h2>
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
-                            <input type="text" name="email" id="email" value={formData.email} onChange={handleInputChange}/>
+                            <input className="signup-input" type="text" name="email" id="email" value={formData.email} onChange={handleInputChange}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label>
-                            <input type="password" name="password" id="password" value={formData.password} onChange={handleInputChange}/>
+                            <input className="signup-input" type="password" name="password" id="password" value={formData.password} onChange={handleInputChange}/>
                         </div>
                         {!show?
-                        <input className="submit-button" type="submit" value="SUBMIT"/>
+                        <input className="signup-submit" type="submit" value="SUBMIT"/>
                         :null}
                         <br/>
                         <br/>
@@ -86,30 +86,29 @@ const SignUp = () => {
                     <div className="part2">
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
-                            <input type="text" name="name" id="name" value={formData.name} onChange={handleInputChange}/>
+                            <input className="signup-input" type="text" name="name" id="name" value={formData.name} onChange={handleInputChange}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="address1">First Line of Address</label>
-                            <input type="text" name="address1" id="address1" value={formData.address1} onChange={handleInputChange}/>
+                            <input className="signup-input" type="text" name="address1" id="address1" value={formData.address1} onChange={handleInputChange}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="address2">Second Line of Address</label>
-                            <input type="text" name="address2" id="address2" value={formData.address2} onChange={handleInputChange}/>
+                            <input className="signup-input" type="text" name="address2" id="address2" value={formData.address2} onChange={handleInputChange}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="postcode">Postcode</label>
-                            <input type="text" name="postcode" id="postcode" value={formData.postcode} onChange={handleInputChange}/>
+                            <input className="signup-input" type="text" name="postcode" id="postcode" value={formData.postcode} onChange={handleInputChange}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="city">City</label>
-                            <input type="text" name="city" id="city" value={formData.city} onChange={handleInputChange}/>
+                            <input className="signup-input" type="text" name="city" id="city" value={formData.city} onChange={handleInputChange}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="country">Country</label>
-                            <input type="text" name="country" id="country" value={formData.country} onChange={handleInputChange}/>
-
+                            <input className="signup-input" type="text" name="country" id="country" value={formData.country} onChange={handleInputChange}/>
                         </div>
-                        <input type="submit" value="CREATE ACCOUNT"/>
+                        <input className="signup-submit" type="submit" value="CREATE ACCOUNT"/>
                     </div>
                     : null
                     }

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Checkout.css'
+import Basket from '../basket/Basket';
 
 const Checkout = () => {
     
@@ -7,7 +8,7 @@ const Checkout = () => {
         <div className="checkout-container">
             <div className="checkout-left">
                 <div className="form-container2">
-                    <form>
+                    <form className="form1">
                         <div className="form-inner2">
                             <div>
                                 <h2>Delivery Address</h2>
@@ -38,13 +39,13 @@ const Checkout = () => {
             </div>
             <div className="checkout-right">
                 <div className="form-container2">
-                    <form>
+                    <form className="form1">
                         <div className="form-inner2">
                             <div>
                                 <h2>In Your Basket</h2>
                                 <div className="form-group2">
                                     <label htmlFor="address1">Subtotal</label>
-                                    <p>£1000.00</p>
+                                    <p>£1205.99</p>
                                 </div>
                                 <div className="form-group2">
                                     <label htmlFor="address2">Shipping</label>
@@ -52,15 +53,15 @@ const Checkout = () => {
                                 </div>
                                 <div className="form-group2">
                                     <label htmlFor="postcode">Total</label>
-                                    <p>£1005.99</p>
+                                    <p>£1205.99</p>
                                 </div>
                                 <div className="form-group2">
                                     <label htmlFor="city">Promo Code</label>
-                                    <input type="text" name="city" id="city"/>
+                                    <input className="checkout-input" type="text" name="city" id="city"/>
                                 </div>
-                                <input type="submit" value="APPLY PROMO CODE"/>
+                                <input className="button" type="submit" value="APPLY PROMO CODE"/>
                                 <br/>
-                                <input type="submit" value="CHECKOUT"/>
+                                <input className="button" type="submit" value="CONFIRM ORDER"/>
                             </div>
                         </div>
                     </form>

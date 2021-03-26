@@ -5,10 +5,10 @@
 .category-row{
     display: flex;
     width: 100%;
-    overflow: hidden;
     justify-content: space-evenly;
 }
 
 .category-row a {
     display: contents;
+    text-decoration: none;
 }

@@ -6,7 +6,7 @@ const cors = require('cors');
 //import routes
 
 const AccountRouter = require('./routes/accountRouter');
-
+const userSignup = require('./routes/userSignupRouter');
 const app = express();
 
 mongoose.connect('mongodb+srv://nisha:passwordabc123@cluster0.kstue.mongodb.net/myShopingCart?retryWrites=true&w=majority',{
@@ -21,5 +21,6 @@ app.use(bodyParser.json());
 
 //routes middleware
 app.use(AccountRouter);
+app.use('/user', userSignup);
 
 app.listen(3001);

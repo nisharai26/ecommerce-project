@@ -7,7 +7,7 @@ const customer = new Schema({
     addressline2:{type:String ,required:false},
     postcode:{type:String,required:true},
     email:{type:String , required:true},
-    password:{type:String , required:true},
+    password:{type:String , required:true,minLength:6},
     orders :{type:Array,required:true}
    
    

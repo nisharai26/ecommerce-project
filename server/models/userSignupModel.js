@@ -11,5 +11,19 @@ const user = new Schema({
     postcode:{type:String, required:true},
     city:{type:String, required:true},
     country:{type:String, require:true}
-})
+});
+// user.statics.getUserByName = async function(name){
+//     let user = await this.findOne({name});
+   
+//     if(user){
+//         return user.toObject();
+//     } else {
+//         return false;
+//     }
+   
+//    }
+   user.statics.checkUserExists = async function(name){
+       let exists = await this.exists({name});
+       return exists;
+   }
 module.exports=model('users',user);

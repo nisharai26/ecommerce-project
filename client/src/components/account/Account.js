@@ -5,15 +5,21 @@ const Account = () => {
   const [customerID, setCustomerID] = useState('');
   const [formData, setFormData] = useState({
     name: '',
-    address: '',
+    addressline1: '',
+    addressline2: '',
+    postcode: '',
      email: '',
-     password:''
+     password:'',
+   
   });
   const [updateData, setUpdateData] = useState({
     name: '',
-    address: '',
+    addressline1: '',
+    addressline2: '',
+    postcode: '',
      email: '',
-     password:''
+     password:'',
+  
   });
   const getCustomer = () => {
     fetch('http://localhost:3001/customer/all')
@@ -52,9 +58,12 @@ const Account = () => {
       customers.map((customer, i) => (
         <div key={i}>
           <p>name: {customer.name}</p>
-          <p>address: {customer.address}</p>
+          <p>addressline1: {customer.addressline1}</p>
+          <p>addressline2: {customer.addressline2}</p>
+          <p>postcode: {customer.postcode}</p>
           <p>email: {customer.email}</p>
           <p>password: {customer.password}</p>
+  
         
           <button onClick={() => {deleteCustomer(customer._id)}}>Delete</button>
           <button onClick= {() => {setCustomerID(customer._id)}}>Update</button>
@@ -66,9 +75,12 @@ const Account = () => {
   const handleInputChange = (event) => {
     let newObj = {
       name: formData.name,
-      address: formData.address,
+      addressline1: formData.addressline1,
+      addressline2: formData.addressline2,
+      postcode: formData.address,
      email:formData.email,
-     password:formData.password
+     password:formData.password,
+
     }
     newObj[event.target.name] = event.target.value;
     setFormData(newObj);
@@ -76,9 +88,12 @@ const Account = () => {
   const handleUpdateChange = (event) => {
     let newObj = {
       name: updateData.name,
-      address: updateData.address,
-      email:updateData.email,
-      password:updateData.password
+      addressline1: updateData.addressline1,
+      addressline2: updateData.addressline2,
+      postcode: updateData.address,
+     email:updateData.email,
+     password:updateData.password,
+ 
     }
     newObj[event.target.name] = event.target.value;
     setUpdateData(newObj);
@@ -106,12 +121,17 @@ const Account = () => {
       <form onSubmit={createCustomer}>
         name: <input type='text' name='name' value={formData.name} onChange={handleInputChange}/>
      <br/>
-        address: <input type='text' name='address' value={formData.address} onChange={handleInputChange}/>
+        addressline1: <input type='text' name='addressline1' value={formData.addressline1} onChange={handleInputChange}/>
+        <br/>
+        addressline2: <input type='text' name='addressline2' value={formData.addressline2} onChange={handleInputChange}/>
+        <br/>
+        postcode: <input type='text' name='postcode' value={formData.postcode} onChange={handleInputChange}/>
         <br/>
         email: <input type='email' name='email' value={formData.email} onChange={handleInputChange}/>
         <br/>
         password: <input type='password' name='password' value={formData.password} onChange={handleInputChange}/>
         <br/>
+      
         
         <input type='submit'/>
       </form>

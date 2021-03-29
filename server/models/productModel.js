@@ -1,6 +1,5 @@
 const {Schema,model}= require('mongoose');
 
-
 const product = new Schema({
     category: {type: String, required: true},
     image: {type: String, required: true},
@@ -11,5 +10,4 @@ const product = new Schema({
     description: {type: String, required: true}
 })
 
-
-module.exports=model('inventory', product);
+module.exports=model('Products', product);

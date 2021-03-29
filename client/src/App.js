@@ -21,8 +21,8 @@ const App = () => {
           <Route path="/" exact component={Home}/>
           <Route path="/sign-in-up" exact component={SignUp}/>
           <Route path="/checkout" exact component={Checkout}/>
-          <Route path = "/Account" exact component = {Account}/>
-          <Route path = "/Basket" exact component = {Basket}/>
+          <Route path = "/account" exact component = {Account}/>
+          <Route path = "/basket" exact component = {Basket}/>
           <Route path="/categories/*"exact component={CategoryPage}/>
         </Switch>
         <Footer/>

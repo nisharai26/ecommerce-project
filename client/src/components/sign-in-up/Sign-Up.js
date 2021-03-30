@@ -51,7 +51,7 @@ const SignUp = () => {
       const createCustomer = async(event) => {
         event.preventDefault();
 
-        if(show==true){
+        if(show===true){
             console.log(formData);
             let res = await fetch('http://localhost:3001/user/create',{
               method: 'POST',
@@ -65,7 +65,7 @@ const SignUp = () => {
             });
             res=(await res.json());
 
-            if(res.success==true){
+            if(res.success===true){
                 setRedirect(true);
             }
           
@@ -86,12 +86,11 @@ else{
     });
     res=(await res.json());
 
-            if(res.matchuser==true){
+            if(res.matchuser===true){
                 setRedirect(true);
             }
 }
     
-  
         
       }
     
@@ -101,10 +100,7 @@ else{
         {redirect ?
             <Redirect to='/'/>:null
           }
-     
-     
-        
-            
+    
             <form className="form3" onSubmit={createCustomer}> 
                 <div className="form-inner">
                     <div className ="part1">

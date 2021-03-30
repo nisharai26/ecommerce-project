@@ -6,7 +6,7 @@ const SessionModel = require('../models/sessionModel');
 
 exports.Signup = (req, res) =>{
     
-    let signUpUser = new UsersignupModel({
+   let signUpUser = new UsersignupModel({
         _id:new Types.ObjectId(),
         email:req.body.email,
         password:req.body.password,
@@ -26,6 +26,21 @@ exports.Signup = (req, res) =>{
         message:'New customer was created'
     });
 };
+
+exports.checkUser = async(req, res) => { 
+   let matchuser = await UsersignupModel.getUserbyEmail(req.body.email);
+    if (!matchuser) {
+ res.send({err: 'User not found'}); 
+ return;
+ }
+ let passwordsMatch = req.body.password;
+// let passwordsMatch = bcrypt.compareSync(req.body.password, matchuser.password);
+    if (passwordsMatch==matchuser.password) {
+        
+res.send({matchuser}); 
+} else {
+ res.send({err: 'Incorrect password'}); 
+}};
 
 // bcrypt.hash(password,12,(err,hash)=>{ 
     

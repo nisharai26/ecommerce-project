@@ -41,24 +41,44 @@ const SignUp = () => {
       }
       const createCustomer = async(event) => {
         event.preventDefault();
-        console.log(formData);
-        let res = await fetch('http://localhost:3001/user/create',{
-          method: 'POST',
-          mode: 'cors',
-          headers: {
-          'content-type': 'application/json',
-          'Accept': 'application/json'
-          },
-          body: JSON.stringify(formData)
+        if(show==true){
+            console.log(formData);
+            let res = await fetch('http://localhost:3001/user/create',{
+              method: 'POST',
+              mode: 'cors',
+              headers: {
+              'content-type': 'application/json',
+              'Accept': 'application/json'
+              },
+              body: JSON.stringify(formData)
 
-        });
-        console.log(await res.json());
+            });
+            console.log(await res.json());
+
+        }
+       
+else{
+
+    let res = await  fetch('http://localhost:3001/user/login', {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'content-type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    });
+    console.log( await res.json());
+}
+    
+        
         
       }
     
     return(
         <div className="form-container">
-            <form className="form3" onSubmit={createCustomer}>
+            
+            <form className="form3" onSubmit={createCustomer}> 
                 <div className="form-inner">
                     <div className ="part1">
                         <h2>Login</h2>

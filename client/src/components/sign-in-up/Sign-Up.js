@@ -1,10 +1,19 @@
 import React, {useState, useEffect} from 'react'
-import './Sign-Up.css'
+import { Redirect} from 'react-router-dom';
+
+import './Sign-Up.css';
+
+
 
 const SignUp = () => {
+
+   const[redirect,setRedirect]=useState(false);
     const [customers, setCustomers] = useState([]);
    
+
+
     const [formData, setFormData] = useState({
+
         email:'',
         password:'',
         name:'',
@@ -41,6 +50,7 @@ const SignUp = () => {
       }
       const createCustomer = async(event) => {
         event.preventDefault();
+
         if(show==true){
             console.log(formData);
             let res = await fetch('http://localhost:3001/user/create',{
@@ -53,7 +63,13 @@ const SignUp = () => {
               body: JSON.stringify(formData)
 
             });
-            console.log(await res.json());
+            res=(await res.json());
+
+            if(res.success==true){
+                setRedirect(true);
+            }
+          
+           
 
         }
        
@@ -68,15 +84,26 @@ else{
       },
       body: JSON.stringify(formData)
     });
-    console.log( await res.json());
+    res=(await res.json());
+
+            if(res.matchuser==true){
+                setRedirect(true);
+            }
 }
     
-        
+  
         
       }
     
     return(
-        <div className="form-container">
+<div className="form-container">
+       
+        {redirect ?
+            <Redirect to='/'/>:null
+          }
+     
+     
+        
             
             <form className="form3" onSubmit={createCustomer}> 
                 <div className="form-inner">

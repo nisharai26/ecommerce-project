@@ -37,7 +37,10 @@ exports.checkUser = async(req, res) => {
 // let passwordsMatch = bcrypt.compareSync(req.body.password, matchuser.password);
     if (passwordsMatch==matchuser.password) {
         
-res.send({matchuser}); 
+res.send({
+     matchuser:true,
+     message:'Login Successful'
+    }); 
 } else {
  res.send({err: 'Incorrect password'}); 
 }};

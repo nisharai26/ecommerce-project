@@ -16,18 +16,26 @@ const CategoryPage = (props) => {
       getProducts();
   }, []);
 
-  const laptops = products.filter(function(laptop) {
-      return laptop.category == 'laptops';
+  const segmentURL = window.location.href.split('/');
+  const currentCategory = segmentURL.pop();
+
+  const categoryTitle = currentCategory.charAt(0).toUpperCase() + currentCategory.slice(1);
+
+  const filterCategory = products.filter(function(product) {
+      return product.category == `${currentCategory}`;
   });
 
   return (
-      <div className ='category content'>
-              {laptops.map((laptop, index) => {
+    <div class="category-container content">
+      <h1>{categoryTitle}</h1>
+      <div className ='product-grid'>
+              {filterCategory.map((product, index) => {
                   return(
-                      <ProductCard product={laptop}/>
+                      <ProductCard product={product}/>
                   )
               })}
       </div>
+    </div>
   )
 }
 

@@ -16,15 +16,11 @@ const AllProducts = () => {
         getProducts();
     }, []);
 
-    const laptops = products.filter(function(laptop) {
-        return laptop.category == 'laptops';
-    });
-
     return (
         <div className ='category content'>
-                {laptops.map((laptop, index) => {
+                {products.map((product, index) => {
                     return(
-                        <ProductCard product={laptop}/>
+                        <ProductCard product={product}/>
                     )
                 })}
         </div>

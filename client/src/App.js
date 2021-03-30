@@ -9,6 +9,7 @@ import Checkout from './components/checkout/Checkout';
 import Account from './components/account/Account';
 import Basket from './components/basket/Basket';
 import CategoryPage from './components/categories/Categories';
+import AllProducts from './components/allProducts/AllProducts';
 
 
 
@@ -24,6 +25,7 @@ const App = () => {
           <Route path = "/account" exact component = {Account}/>
           <Route path = "/basket" exact component = {Basket}/>
           <Route path="/categories/*"exact component={CategoryPage}/>
+          <Route path="/products/all" exact component={AllProducts}/>
         </Switch>
         <Footer/>
       </BrowserRouter>

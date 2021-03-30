@@ -2,6 +2,7 @@ import React from 'react';
 import './CategoryRow.css';
 import ProductCard from '../product-card/Product-card';
 import data from '../../../ProductData';
+import {useState, useEffect} from 'react';
 
 const CategoryRow = () => {
     const newProducts = data.products.slice(0,3);

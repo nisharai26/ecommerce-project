@@ -11,7 +11,7 @@ const { nanoid } = require("nanoid");
 
 const AccountRouter = require('./routes/accountRouter');
 const userSignup = require('./routes/userSignupRouter');
-// const userLogin = require('./routes/userSignupRouter');
+const productRouter = require('./routes/productRouter');
 const app = express();
 app.use( 
 session({ 
@@ -39,6 +39,8 @@ app.use(bodyParser.json());
 //routes middleware
 app.use(AccountRouter);
 app.use('/user', userSignup);
-//  app.use('/login',userLogin);
+app.use(productRouter);
 
-app.listen(3001);
+app.listen(3001, () => {
+    console.log('Listening on port 3001')
+});

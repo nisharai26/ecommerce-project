@@ -1,15 +1,23 @@
-.category-container {
+.category-container h1 {
+    text-align: center;
+}
+
+.product-grid {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     width:100%;
 }
 
-.category-container a {
+.product-grid a {
     text-decoration: none;
 }
 
-.category-container .product-card {
+.product-grid .product-card {
     max-width: 100%;
     margin: 1vh
+}
+
+.product-grid a {
+    text-decoration: none;
 }
 

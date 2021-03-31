@@ -10,25 +10,43 @@ let productImages = [
 
 const ProductCard = (props) => {
     // console.log(`${props.product._id}`);
-    const [product, basket] = useState([])
 
     const addToBasket= (product) => {
-        console.log(product);
-        let basket = localStorage.setItem('products', JSON.parse(product));
+        let basket = localStorage.getItem('basket')
+        let basketTotal = localStorage.getItem('total')
+          if (basket) {
+            basket = JSON.parse(basket)
+                if (basket.hasOwnProperty(product._id)) {          
+                basket[product._id].quantity ++
+                } else {
+                    basket[product._id] = {
+                    _id: product._id,
+                    image: product.image,
+                    name: product.brand + " " + product.model, 
+                    quantity: 1, 
+                    price: product.price
+                }
+            }
+            } else {
+            basket = {
+                  [product._id]: {
+                    _id: product._id,
+                    image: product.image,
+                    name: product.brand + " " + product.model, 
+                    quantity: 1, 
+                    price: product.price}
+                  }
+          }
+            localStorage.setItem('basket', JSON.stringify(basket))
 
-        // if (basket) {
-        //     basket = JSON.parse(basket);
-        //     if (basket.hasOwnProperty(product)) {
-        //         basket[product].quantity++
-        //     }
-        //     else {
-        //         basket[product] = {
-        //             _id: product,
-        //             quantity: 1
-        //         }
-        //     }
-        // }
-    }
+            let total = (0)
+            Object.entries(basket).map(([key, value]) => {
+                let run = (value.price * value.quantity)               
+                total += run                
+            })
+            // total = parseFloat(total).toFixed(2)
+            localStorage.setItem('total', JSON.stringify(total))
+        }
     return(
         <Link>
         {/* {data.products.map(product =>  */}
@@ -38,7 +56,7 @@ const ProductCard = (props) => {
                 <div className="info-container">
                     <h3>{props.product.brand} {props.product.model}</h3>
                     <p>£{props.product.price}</p>
-                    <button onclick={() => {addToBasket(props.product._id)}}>Add to Basket</button>
+                    <button onClick={() => {addToBasket(props.product)}}>Add to Basket</button>
                 </div>
             </div>
             <div className="expanded-background-container">

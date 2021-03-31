@@ -86,11 +86,11 @@ const decrementBasket = (index) => {
             </div>
         </div>
 
-      //   <div className="mobile">
-      //     <h1>Mobile</h1>
-      //     <img src ={Mobile} alt="Mobile"/>
-      //     <button onClick={()=>incrementBasket(1)}>+</button><h1>{basket[1].quantity}</h1><button onClick={()=>decrementBasket(1)}>-</button>
-      //   </div>
+//  <div className="mobile">
+//     <h1>Mobile</h1>
+//     <img src ={Mobile} alt="Mobile"/>
+//     <button onClick={()=>incrementBasket(1)}>+</button><h1>{basket[1].quantity}</h1><button onClick={()=>decrementBasket(1)}>-</button>
+//   </div>
       //   <div className="watch">
       //     <img src ={Watch} alt="Watch"/>
       //     <button onClick={()=>incrementBasket(2)}>+</button><h1>{basket[2].quantity}</h1><button onClick={()=>decrementBasket(2)}>-</button>

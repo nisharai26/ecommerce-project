@@ -44,6 +44,11 @@ res.send({
 } else {
  res.send({err: 'Incorrect password'}); 
 }};
+exports.logOut=(req,res)=>{
+     console.log("log out");
+     req.session.destroy(); 
+     
+    }
 
 // bcrypt.hash(password,12,(err,hash)=>{ 
     

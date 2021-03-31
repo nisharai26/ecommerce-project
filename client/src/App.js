@@ -9,6 +9,7 @@ import Checkout from './components/checkout/Checkout';
 import Account from './components/account/Account';
 import Basket from './components/basket/Basket';
 import CategoryPage from './components/categories/Categories';
+import AllProducts from './components/allProducts/AllProducts';
 
 
 
@@ -21,9 +22,10 @@ const App = () => {
           <Route path="/" exact component={Home}/>
           <Route path="/sign-in-up" exact component={SignUp}/>
           <Route path="/checkout" exact component={Checkout}/>
-          <Route path = "/Account" exact component = {Account}/>
-          <Route path = "/Basket" exact component = {Basket}/>
+          <Route path = "/account" exact component = {Account}/>
+          <Route path = "/basket" exact component = {Basket}/>
           <Route path="/categories/*"exact component={CategoryPage}/>
+          <Route path="/products/all" exact component={AllProducts}/>
         </Switch>
         <Footer/>
       </BrowserRouter>

@@ -1,0 +1,22 @@
+.order-thanks {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 40vh;
+    justify-content: space-evenly;
+    background-color: white;
+    position: relative;
+}
+
+.outer-div {
+    background-image: linear-gradient(to bottom right, #292f36, #4ECDC4);
+    padding: 5px;
+}
+
+.order-thanks button {
+    border: none;
+    background-color: #4ecdc4;
+    padding: 1vh 1vw;
+    color: white;
+    font-size: 1em;
+}

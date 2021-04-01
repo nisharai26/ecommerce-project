@@ -15,7 +15,7 @@ import AllProducts from './components/allProducts/AllProducts';
 
 const App = () => {
   return(
-    <div className="">
+    <div>
       <BrowserRouter>
         <Navbar/>
         <Switch>

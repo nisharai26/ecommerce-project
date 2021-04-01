@@ -3,7 +3,15 @@ import './Checkout.css'
 import Basket from '../basket/Basket';
 
 const Checkout = () => {
+
+    const basketTotal = parseFloat(localStorage.getItem('total')).toFixed(2)
     
+    const getTotal = (basketTotal) => {
+        const totalAsNum = parseFloat(basketTotal);
+        const checkoutTotal = totalAsNum + 5.99;
+        return checkoutTotal.toFixed(2);
+    }
+
     return(
         <div className="checkout-container">
             <div className="checkout-left">
@@ -45,7 +53,7 @@ const Checkout = () => {
                                 <h2>In Your Basket</h2>
                                 <div className="form-group2">
                                     <label htmlFor="address1">Subtotal</label>
-                                    <p>£1205.99</p>
+                                    <p>£{basketTotal}</p>
                                 </div>
                                 <div className="form-group2">
                                     <label htmlFor="address2">Shipping</label>
@@ -53,7 +61,7 @@ const Checkout = () => {
                                 </div>
                                 <div className="form-group2">
                                     <label htmlFor="postcode">Total</label>
-                                    <p>£1205.99</p>
+                                    <p>£{getTotal(basketTotal)}</p>
                                 </div>
                                 <div className="form-group2">
                                     <label htmlFor="city">Promo Code</label>
@@ -61,7 +69,7 @@ const Checkout = () => {
                                 </div>
                                 <input className="button" type="submit" value="APPLY PROMO CODE"/>
                                 <br/>
-                                <input className="button" type="submit" value="CONFIRM ORDER"/>
+                                <input className="button" type="submit" value="CONFIRM ORDER" onClick=""/>
                             </div>
                         </div>
                     </form>

@@ -12,7 +12,6 @@ const Navbar = (props) => {
                 </div>
                 <div class="top-right-nav">
                     <Link to = "/sign-in-up"><div className="log-in-link">Login/Signup</div></Link>
-                    <span className="basket-total">Total:</span>
                     <Link to = "/basket"><img src={Basket} alt="Basket icon"/></Link>
                 </div>
             </div>
@@ -22,7 +21,7 @@ const Navbar = (props) => {
                     <Link to = '/categories/desktops'><li>Desktops</li></Link>
                     <Link to = '/categories/mobiles'><li>Mobiles</li></Link>
                     <Link to = '/categories/smartwatches'><li>Smartwatches</li></Link>
-                    <Link to = '/categories/accesories'><li>Accessories</li></Link>
+                    <Link to = '/categories/accessories'><li>Accessories</li></Link>
                 </ul>
             </div>
         </div>

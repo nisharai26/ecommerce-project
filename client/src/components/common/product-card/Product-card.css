@@ -47,6 +47,13 @@
     font-weight:bolder;
 }
 
+.product-card button {
+    background-color: #4ecdc4;
+    border: none;
+    padding: 1vh 1vw;
+    border-radius: 2px;
+}
+
 .product-card ul {
     color:#fff;
     list-style-type:none;

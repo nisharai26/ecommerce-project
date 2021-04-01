@@ -9,8 +9,6 @@ let productImages = [
 ]
 
 const ProductCard = (props) => {
-    // console.log(`${props.product._id}`);
-
     const addToBasket= (product) => {
         let basket = localStorage.getItem('basket')
         let basketTotal = localStorage.getItem('total')
@@ -44,12 +42,10 @@ const ProductCard = (props) => {
                 let run = (value.price * value.quantity)               
                 total += run                
             })
-            // total = parseFloat(total).toFixed(2)
             localStorage.setItem('total', JSON.stringify(total))
         }
     return(
         <Link>
-        {/* {data.products.map(product =>  */}
             <div className="product-card">
             <div className = "product-info">
                 <img src={props.product.image} alt={props.product.imageAlt}/>
@@ -65,7 +61,6 @@ const ProductCard = (props) => {
                 </div>
             </div>
         </div>
-            {/* )} */}
         </Link>
     )
 }

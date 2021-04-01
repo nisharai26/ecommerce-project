@@ -21,7 +21,7 @@ const Navbar = (props) => {
                     <Link to = '/categories/desktops'><li>Desktops</li></Link>
                     <Link to = '/categories/mobiles'><li>Mobiles</li></Link>
                     <Link to = '/categories/smartwatches'><li>Smartwatches</li></Link>
-                    <Link to = '/categories/accesories'><li>Accessories</li></Link>
+                    <Link to = '/categories/accessories'><li>Accessories</li></Link>
                 </ul>
             </div>
         </div>

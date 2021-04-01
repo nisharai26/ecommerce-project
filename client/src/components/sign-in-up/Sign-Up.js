@@ -118,7 +118,7 @@ else{
                         :null}
                         <br/>
                         <br/>
-                        <input type="radio" name="signup" value="SignIn" onChange={() => setShow(false)}/>Sign In
+                        <input type="radio" name="signup" value="SignIn" onChange={() => setShow(false)} checked/>Sign In
                         <br/>
                         <input type="radio" name="signup" value="SignUp" onChange={() => setShow(true)}/>Sign Up
                         <br/>

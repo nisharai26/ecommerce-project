@@ -1,6 +1,7 @@
 import React from 'react'
 import './Checkout.css'
 import Basket from '../basket/Basket';
+import {Link} from 'react-router-dom';
 
 const Checkout = () => {
 
@@ -10,6 +11,10 @@ const Checkout = () => {
         const totalAsNum = parseFloat(basketTotal);
         const checkoutTotal = totalAsNum + 5.99;
         return checkoutTotal.toFixed(2);
+    }
+
+    const clearBasket = () => {
+        localStorage.removeItem('basket', 'total')
     }
 
     return(
@@ -69,7 +74,9 @@ const Checkout = () => {
                                 </div>
                                 <input className="button" type="submit" value="APPLY PROMO CODE"/>
                                 <br/>
-                                <input className="button" type="submit" value="CONFIRM ORDER" onClick=""/>
+                                <Link to = '/checkout/order-confirmed'>
+                                    <input className="button" type="submit" value="CONFIRM ORDER" onClick={clearBasket()}/>
+                                </Link>
                             </div>
                         </div>
                     </form>

@@ -1,4 +1,4 @@
 # ecommmerce-site
 CN Master Coding final group project.
 
-We have no idea what we're doing.
+A MERN group-project to develop the ecommerce-site
